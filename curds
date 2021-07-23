@@ -1,0 +1,18 @@
+const express = require('express')
+const mongoose = require('mongoose')
+const url = 'mongodb://localhost/clientDBex'
+const app = express()
+mongoose.connect(url,  {useNewUrlParser:true})
+const con = mongoose.connect
+
+const.on('open', function(){
+    console.log('connected....')
+})
+app.listen(3000, function(){
+    console.log('connected..')
+})
+const clientRouter = required('../router/client')
+app.use('/client', clientRouter)
+app.listen(3000, function(){
+    console.log('Server started')
+})
